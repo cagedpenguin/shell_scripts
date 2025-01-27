@@ -98,9 +98,9 @@ shutdown
 ################## NOTES
 # SET THESE
 # WHERE="/opt/kvm"
-# ISO="Rocky-9-latest-x86_64-minimal.iso"
-# KS="rocky9_basic.ks"
-# VAR="rocky9"
+# ISO="Rocky-8-latest-x86_64-minimal.iso"
+# KS="rocky8_basic.ks"
+# VAR="rocky8"
 #
 #  virt-install \
 #    --virt-type=kvm \
@@ -113,7 +113,7 @@ shutdown
 #    --location=$WHERE/ISOS/$ISO \
 #    --network bridge=br0 \
 #    --graphics vnc \
-#    --boot uefi --boot useserial=on \
+#    --boot uefi \
 #    --disk path="/var/lib/libvirt/images/$1.img",size=$4,bus=virtio \
 #    --extra-args="inst.ks=file:/$KS console=tty0 console=ttyS0,115200n8" \
 #    --initrd-inject $WHERE/kickstart/$KS \
